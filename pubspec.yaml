@@ -1,0 +1,25 @@
+name: flutter_project_nu
+description: "A new Flutter project."
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ^3.10.7
+
+dependencies:
+  animated_text_kit: ^4.3.0
+  flutter:
+    sdk: flutter
+  google_fonts: ^8.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  assets:
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets\images\
+    - assets\icons\

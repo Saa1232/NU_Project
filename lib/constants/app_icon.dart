@@ -1,14 +1,30 @@
 class appIconsHome {
-  static String bellIcon = "assets/icons/bell_icon.png";
+  static String bellIcon = "assets/icons/bell.png";
   static String qrIcon = "assets/icons/qr_icons.png";
   static String downLeftIcon = "assets/icons/icons_down_left.png";
   static String uprightIcon = "assets/icons/icon_right_arrow.png";
-  static String loanIcon = "";
-  static String cashbackIcon = "";
-  static String scanIcon = "";
-  static String starIcon = "";
-  static String locatorIcon = "";
-  static String governmentIcon = "";
-
-  static String newaccountIcon = "";
+  static String loanIcon = "assets/icons/icons_loan.png";
+  static String cashbackIcon = "assets/icons/icons_cashback.png";
+  static String scanIcon = "assets/icons/icon_scan.png";
+  static String starIcon = "assets/icons/star_Icon.png";
+  static String locatorIcon = "assets/icons/icon_locator.png";
+  static String governmentIcon = "assets/icons/icon_goverment_service.png";
+  static String checkbookIcon = "assets/icons/icon_checkbook.png";
+  static String newaccountIcon = "assets/icons/icons_newaccount.png";
+  static String storeIcon = "assets/icons/icon_store.png";
+  static String giftIcon = "assets/icons/icon_gift.png";
+  static String exchangeIcon = "assets/icons/icon_exchange_rate.png";
+  static String autopayIcon = "assets/icons/icon_autopayment.png";
+  static String chartIcon = "assets/icons/icon_chart.png";
+  static String accountIcon = "assets/icons/account_icons.png";
+  static String cardIcon = "assets/icons/icon_card_home.png";
+  static String transferIcon = "assets/icons/transfer_icon.png";
+  static String paymentIcon = "assets/icons/icon_payment.png";
+  static String chatIcon = "assets/icons/chat_icon.png";
+  static String eCashIcon = "assets/icons/e_cash_icon.png";
+  static String miniappIcon = "assets/icons/minapp_icon.png";
+  static String invitefriendIcon = "assets/icons/invite_friend_icon.png";
+  static String naviIcon = "assets/icons/navi_icon.png";
+  static String receiveIcon = "assets/icons/icons_down_left.png";
+  static String sendIcon = "assets/icons/icons_up_right.png";
 }

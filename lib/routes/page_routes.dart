@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_project_nu/pages/home_screens/home_screen.dart';
 import 'package:flutter_project_nu/pages/login_screens/login_screen.dart';
 import 'package:flutter_project_nu/pages/option_login_and_register/login_or_register.dart';
+import 'package:flutter_project_nu/pages/pin_menu_screen/aba_scan__screen.dart';
+import 'package:flutter_project_nu/pages/pin_menu_screen/account_screen.dart';
+import 'package:flutter_project_nu/pages/pin_menu_screen/card_screen.dart';
+import 'package:flutter_project_nu/pages/pin_menu_screen/favourite_screen.dart';
+import 'package:flutter_project_nu/pages/pin_menu_screen/payment_screen.dart';
+import 'package:flutter_project_nu/pages/pin_menu_screen/transfer_screen.dart';
 import 'package:flutter_project_nu/pages/register_screen/register_screen.dart';
 import 'package:flutter_project_nu/pages/splash_screens/splash_screen.dart';
 import 'package:flutter_project_nu/routes/app_routes.dart';
@@ -45,6 +51,56 @@ class PageRoutes {
       case AppRoutes.homeScreen:
         return PageTransition.build(
           page: HomeScreen(),
+          settings: settings,
+          transition: PageTransitionType.fadeThrough,
+          duration: Duration(milliseconds: 500),
+        );
+
+      // pin menu in home screens
+
+      case AppRoutes.accountScreen:
+        return PageTransition.build(
+          page: AccountScreen(),
+          settings: settings,
+          transition: PageTransitionType.fadeThrough,
+          duration: Duration(milliseconds: 500),
+        );
+
+      case AppRoutes.cardScreen:
+        return PageTransition.build(
+          page: CardScreen(),
+          settings: settings,
+          transition: PageTransitionType.fadeThrough,
+          duration: Duration(milliseconds: 500),
+        );
+
+      case AppRoutes.paymentScreen:
+        return PageTransition.build(
+          page: PaymentScreen(),
+          settings: settings,
+          transition: PageTransitionType.fadeThrough,
+          duration: Duration(milliseconds: 500),
+        );
+
+      case AppRoutes.abaScanscreen:
+        return PageTransition.build(
+          page: ABAScanScreen(),
+          settings: settings,
+          transition: PageTransitionType.fadeThrough,
+          duration: Duration(milliseconds: 500),
+        );
+
+      case AppRoutes.favoritesScreen:
+        return PageTransition.build(
+          page: FavouriteScreen(),
+          settings: settings,
+          transition: PageTransitionType.fadeThrough,
+          duration: Duration(milliseconds: 500),
+        );
+
+      case AppRoutes.transferScreen:
+        return PageTransition.build(
+          page: TransferScreen(),
           settings: settings,
           transition: PageTransitionType.fadeThrough,
           duration: Duration(milliseconds: 500),

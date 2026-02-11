@@ -5,4 +5,10 @@ abstract class AppRoutes {
   static const String loginScreen = "/loginScreen";
   static const String homeScreen = "/homeScreen";
   static const String registerScreen = "/registerScreen";
+  static const String abaScanscreen = "/abascsnScreen";
+  static const String accountScreen = "/accountScreen";
+  static const String paymentScreen = "/paymentScreen";
+  static const String cardScreen = "/cardScreen";
+  static const String favoritesScreen = "/FavoriteScreen";
+  static const String transferScreen = "/transferScreen";
 }

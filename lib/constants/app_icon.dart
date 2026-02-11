@@ -27,4 +27,17 @@ class appIconsHome {
   static String naviIcon = "assets/icons/navi_icon.png";
   static String receiveIcon = "assets/icons/icons_down_left.png";
   static String sendIcon = "assets/icons/icons_up_right.png";
+  static String paymentScreenMainIcon1 = "assets/icons/payment_pinIcon1.PNG";
+  static String paymentScreenMainIcon2 = "assets/icons/payment_pinIcon2.PNG";
+  static String paymentScreenMainIcon3 = "assets/icons/payment_pinIcon3.PNG";
+  static String paymentScreenMainIcon4 = "assets/icons/payment_pinIcon4.PNG";
+  static String paymentScreenIcon1 = "assets/icons/card_icon1.PNG";
+  static String paymentScreenIcon2 = "assets/icons/card_icon2.PNG";
+  static String paymentScreenIcon3 = "assets/icons/card_icon3.PNG";
+  static String paymentScreenIcon4 = "assets/icons/card_icon4.PNG";
+  static String paymentScreenIcon5 = "assets/icons/card_icon5.PNG";
+  static String paymentScreenIcon6 = "assets/icons/card_icon6.PNG";
+  static String paymentScreenIcon7 = "assets/icons/card_icon7.PNG";
+  static String paymentScreenIcon8 = "assets/icons/card_icon8.PNG";
+  static String paymentScreenIcon9 = "assets/icons/card_icon9.PNG";
 }

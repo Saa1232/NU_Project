@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_nu/constants/app_icon.dart';
+import 'package:flutter_project_nu/routes/app_routes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -9,6 +10,16 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
+var selectedScreen = 0;
+
+var screens = [
+  AppRoutes.accountScreen,
+  AppRoutes.cardScreen,
+  AppRoutes.paymentScreen,
+  AppRoutes.abaScanscreen,
+  AppRoutes.favoritesScreen,
+  AppRoutes.transferScreen,
+];
 var miniappitemname = [
   "Memoria Spa",
   "Big Bus Angkor Phnom Penh",
@@ -512,7 +523,13 @@ class _HomeScreenState extends State<HomeScreen> {
 
         itemBuilder: (context, index) {
           return GestureDetector(
-            onTap: () {},
+            onTap: () {
+              setState(() {
+                debugPrint("You clicked : $selectedScreen");
+                index = selectedScreen;
+                Navigator.pushNamed(context, screens[selectedScreen]);
+              });
+            },
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.black,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_nu/pages/edit_profile/edit_profile.dart';
+import 'package:flutter_project_nu/pages/eidt_security/edit_security.dart';
 import 'package:flutter_project_nu/pages/home_screens/home_screen.dart';
 import 'package:flutter_project_nu/pages/login_screens/login_screen.dart';
 import 'package:flutter_project_nu/pages/option_login_and_register/login_or_register.dart';
@@ -61,6 +62,13 @@ class PageRoutes {
       case AppRoutes.editProfileScreen:
         return PageTransition.build(
           page: EditProfile(),
+          settings: settings,
+          transition: PageTransitionType.iosPush,
+          duration: Duration(milliseconds: 500),
+        );
+      case AppRoutes.editsecurityScreen:
+        return PageTransition.build(
+          page: EditSecurity(),
           settings: settings,
           transition: PageTransitionType.iosPush,
           duration: Duration(milliseconds: 500),

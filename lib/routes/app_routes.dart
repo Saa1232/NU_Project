@@ -7,4 +7,6 @@ abstract class AppRoutes {
   static const String registerScreen = "/registerScreen";
   static const String profileScreen = "/profileScreen";
   static const String editProfileScreen = "/editProfileScreen";
+  static const String editsecurityScreen = "/editSecurityScreen";
+
 }

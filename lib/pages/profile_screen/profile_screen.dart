@@ -171,7 +171,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
             child: _buildItem("My Profile", appIconsHome.profileIconsetting),
           ),
           SizedBox(height: 5),
-          _buildItem("Security", appIconsHome.securityIcon),
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamedAndRemoveUntil(
+                context,
+                AppRoutes.editsecurityScreen,
+                (route) => false,
+              );
+            },
+            child: _buildItem("Security", appIconsHome.securityIcon),
+          ),
           SizedBox(height: 5),
           _buildItem(
             "Shake Action",

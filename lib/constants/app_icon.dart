@@ -27,4 +27,13 @@ class appIconsHome {
   static String naviIcon = "assets/icons/navi_icon.png";
   static String receiveIcon = "assets/icons/icons_down_left.png";
   static String sendIcon = "assets/icons/icons_up_right.png";
+  static String profileIconsetting = "assets/icons/profileIconSettings.png";
+  static String securityIcon = "assets/icons/securityIcon (2).png";
+  static String phoneShakeIcon = "assets/icons/shake.png";
+  static String languageIcon = "assets/icons/Language (2).png";
+  static String conatactIcon = "assets/icons/contact.png";
+  static String termConditionIcon = "assets/icons/term_condition.png";
+  static String merchantModeIcon = "assets/icons/merchant_mode.png";
+  static String cameraIcon = "assets/icons/cameraIcon.png";
+  static String idIcon = "assets/icons/IDIcon.png";
 }

@@ -10,6 +10,8 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
+  String selectedShakeAction = "None";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -107,7 +109,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   Widget _buildBodySetting() {
     return Container(
-      //height: 700,
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
@@ -158,6 +159,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
             ),
           ),
+
           GestureDetector(
             onTap: () {
               setState(() {
@@ -170,7 +172,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
             },
             child: _buildItem("My Profile", appIconsHome.profileIconsetting),
           ),
+
           SizedBox(height: 5),
+
           GestureDetector(
             onTap: () {
               Navigator.pushNamedAndRemoveUntil(
@@ -181,21 +185,32 @@ class _ProfileScreenState extends State<ProfileScreen> {
             },
             child: _buildItem("Security", appIconsHome.securityIcon),
           ),
+
           SizedBox(height: 5),
-          _buildItem(
-            "Shake Action",
-            appIconsHome.phoneShakeIcon,
-            moreText: "None",
+
+          GestureDetector(
+            onTap: _showShakeBottomSheet,
+            child: _buildItem(
+              "Shake Action",
+              appIconsHome.phoneShakeIcon,
+              moreText: selectedShakeAction,
+            ),
           ),
+
           SizedBox(height: 5),
+
           _buildItem(
             "Language",
             appIconsHome.languageIcon,
             moreText: "English",
           ),
+
           SizedBox(height: 5),
+
           _buildItem("Contact Us", appIconsHome.conatactIcon),
+
           SizedBox(height: 5),
+
           _buildItem("Terms & Conditions", appIconsHome.termConditionIcon),
         ],
       ),
@@ -305,6 +320,86 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ),
         ),
       ],
+    );
+  }
+
+  void _showShakeBottomSheet() {
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: const Color(0xff1c2a38),
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(25)),
+      ),
+      builder: (context) {
+        return StatefulBuilder(
+          builder: (context, setModalState) {
+            return Padding(
+              padding: const EdgeInsets.all(16),
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    SizedBox(height: 10),
+                    Container(
+                      width: 40,
+                      height: 5,
+                      decoration: BoxDecoration(
+                        color: Colors.grey,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Icon(Icons.phone_iphone, size: 60, color: Colors.white),
+                    SizedBox(height: 15),
+                    Text(
+                      "Shake Action",
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    SizedBox(height: 8),
+                    Text(
+                      "Select a function below for quick access when shaking your phone:",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                    SizedBox(height: 20),
+
+                    _radioTile("ABA Merchant", setModalState),
+                    _radioTile("ABA QR", setModalState),
+                    _radioTile("ABA Scan", setModalState),
+                    _radioTile("Analytics", setModalState),
+                    _radioTile("Favorites", setModalState),
+                    _radioTile("Navi", setModalState),
+                    _radioTile("None", setModalState),
+
+                    SizedBox(height: 20),
+                  ],
+                ),
+              ),
+            );
+          },
+        );
+      },
+    );
+  }
+
+  Widget _radioTile(String value, StateSetter setModalState) {
+    return RadioListTile(
+      value: value,
+      // ignore: deprecated_member_use
+      groupValue: selectedShakeAction,
+      // ignore: deprecated_member_use
+      onChanged: (val) {
+        setModalState(() {
+          selectedShakeAction = val!;
+        });
+        setState(() {});
+      },
+      title: Text(value, style: TextStyle(color: Colors.white)),
+      activeColor: Colors.blue,
     );
   }
 }

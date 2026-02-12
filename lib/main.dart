@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_nu/pages/pin_menu_screen/payment_screen.dart';
-import 'package:flutter_project_nu/pages/pin_menu_screen/transfer_screen.dart';
+import 'package:flutter_project_nu/pages/pin_menu_screen/account_screen.dart';
 import 'package:flutter_project_nu/routes/app_routes.dart';
 import 'package:flutter_project_nu/routes/page_routes.dart';
 
@@ -18,7 +17,7 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(scaffoldBackgroundColor: Color(0xff024164)),
       initialRoute: AppRoutes.splashScreen,
       onGenerateRoute: PageRoutes.onGenerateRoute,
-      //home: TransferScreen(),
+      //home: AccountScreen(),
     );
   }
 }

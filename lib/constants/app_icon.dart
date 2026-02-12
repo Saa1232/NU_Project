@@ -40,4 +40,24 @@ class appIconsHome {
   static String paymentScreenIcon7 = "assets/icons/card_icon7.PNG";
   static String paymentScreenIcon8 = "assets/icons/card_icon8.PNG";
   static String paymentScreenIcon9 = "assets/icons/card_icon9.PNG";
+  static String transferIcon1 = "assets/icons/transferIcon1.PNG";
+  static String transferIcon2 = "assets/icons/transferIcon2.PNG";
+  static String transferIcon3 = "assets/icons/transferIcon3.PNG";
+  static String transferIcon4 = "assets/icons/transferIcon4.PNG";
+  static String transferIcon5 = "assets/icons/transferIcon5.PNG";
+  static String transferIcon6 = "assets/icons/transferIcon6.PNG";
+  static String transferIcon7 = "assets/icons/transferIcon7.PNG";
+  static String transferIcon8 = "assets/icons/transferIcon8.PNG";
+  static String transferIcon9 = "assets/icons/transferIcon9.PNG";
+  static String transferIcon10 = "assets/icons/transferIcon10.PNG";
+  static String transferIcon11 = "assets/icons/transferIcon11.PNG";
+  static String transferIcon12 = "assets/icons/transferIcon12.PNG";
+  static String transferIcon13 = "assets/icons/transferIcon13.PNG";
+  static String cardScreenIcon1 = "assets/icons/card_screenicon1.jpg";
+  static String cardScreenIcon2 = "assets/icons/card_screenicon2.jpg";
+  static String cardScreenIcon3 = "assets/icons/card_screenicon3.jpg";
+  static String cardScreenIcon4 = "assets/icons/card_screenicon4.jpg";
+  static String cardScreenIcon5 = "assets/icons/card_screenicon5.jpg";
+  static String favIcon = "assets/icons/fav_Icon.PNG";
+  static String favScreenIcon = "assets/icons/fav_screenicon1.jpg";
 }

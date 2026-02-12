@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_nu/constants/app_icon.dart';
+import 'package:flutter_project_nu/routes/app_routes.dart';
 
 class PaymentScreen extends StatefulWidget {
   const PaymentScreen({super.key});
@@ -57,7 +58,14 @@ class _PaymentScreenState extends State<PaymentScreen> {
         children: [
           Row(
             children: [
-              Icon(Icons.arrow_back_ios, color: Colors.white),
+              GestureDetector(
+                onTap: () {
+                  setState(() {
+                    Navigator.pop(context, AppRoutes.homeScreen);
+                  });
+                },
+                child: Icon(Icons.arrow_back_ios, color: Colors.white),
+              ),
               Spacer(),
               Container(
                 padding: EdgeInsets.all(5),

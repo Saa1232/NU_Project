@@ -50,4 +50,5 @@ class appIconsHome {
   static String pinIcon = "assets/icons/PINIcon.png";
   static String timeIcon = "assets/icons/time.png";
   static String faceidpass = "assets/icons/faceidpass.png";
+  static String contactLogin = "assets/icons/newcellphone.png";
 }

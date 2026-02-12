@@ -281,6 +281,26 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               ),
               Text("|", style: TextStyle(color: Colors.white)),
+              SizedBox(width: 5),
+              Row(
+                children: [
+                  Container(height: 10, width: 10, color: Colors.red),
+                  SizedBox(width: 5),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "NATIONAL BANK",
+                        style: TextStyle(fontSize: 5, color: Colors.white),
+                      ),
+                      Text(
+                        "OF CANADA GROUP",
+                        style: TextStyle(fontSize: 5, color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ],
           ),
         ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_nu/constants/app_icon.dart';
+import 'package:flutter_project_nu/constants/app_image.dart';
 import 'package:flutter_project_nu/routes/app_routes.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -86,7 +87,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: Colors.grey,
-              border: Border.all(width: 3, color: Colors.white),
+              border: Border.all(width: 2, color: Colors.white),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadiusGeometry.circular(65),
+              child: Image.asset(AppImage.profileImage, fit: BoxFit.cover),
             ),
           ),
           SizedBox(height: 5),

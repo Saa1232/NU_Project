@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_nu/constants/app_icon.dart';
 
 class SavingusdScreen extends StatefulWidget {
   const SavingusdScreen({super.key});
@@ -43,7 +42,7 @@ class _SavingusdScreenState extends State<SavingusdScreen> {
                 "Yesterday".toUpperCase(),
                 style: TextStyle(color: Colors.white60),
               ),
-              Container(width: .infinity, height: 60),
+              SizedBox(width: .infinity, height: 60),
             ],
           ),
         ),

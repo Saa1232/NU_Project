@@ -10,10 +10,14 @@ class EditProfile extends StatefulWidget {
 }
 
 class _EditProfileState extends State<EditProfile> {
+  var expandedIndex = 1;
+  String iconupdown = "";
+  bool isExpanded = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(163, 33, 45, 57),
+      backgroundColor: Color(0xff101c28),
       body: SafeArea(
         child: Stack(
           children: [
@@ -24,6 +28,7 @@ class _EditProfileState extends State<EditProfile> {
                   _buildHeadProfile(),
                   _buildRegistered(),
                   _buildPersonalDetails(),
+                  _buildAddressEmploymentInfo(),
                 ],
               ),
             ),
@@ -92,10 +97,10 @@ class _EditProfileState extends State<EditProfile> {
       height: 50,
       width: double.infinity,
 
-      color: Color.fromARGB(163, 33, 45, 57),
+      color: Color(0xff101c28),
 
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(7.0),
         child: Row(
           children: [
             Row(
@@ -150,7 +155,7 @@ class _EditProfileState extends State<EditProfile> {
         children: [
           Text(
             "REGISTERED PHONE NUMBER",
-            style: TextStyle(fontSize: 20, color: Colors.white70),
+            style: TextStyle(fontSize: 18, color: Colors.white70),
           ),
           SizedBox(height: 5),
           Container(
@@ -207,7 +212,7 @@ class _EditProfileState extends State<EditProfile> {
         children: [
           Text(
             "PERSONAL DETAILS",
-            style: TextStyle(fontSize: 20, color: Colors.white70),
+            style: TextStyle(fontSize: 18, color: Colors.white70),
           ),
           SizedBox(height: 10),
           Container(
@@ -234,9 +239,16 @@ class _EditProfileState extends State<EditProfile> {
                   ),
                   SizedBox(height: 5),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    // mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Container(height: 50, width: 120, color: Colors.white),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 35),
+                        child: Container(
+                          height: 50,
+                          width: 80,
+                          color: Colors.white,
+                        ),
+                      ),
                       SizedBox(width: 5),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -257,10 +269,13 @@ class _EditProfileState extends State<EditProfile> {
                     ],
                   ),
                   SizedBox(height: 10),
-                  Container(
-                    height: 2,
-                    width: double.infinity,
-                    color: Colors.grey.shade800,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 35),
+                    child: Container(
+                      height: 2,
+                      width: double.infinity,
+                      color: Colors.grey.shade800,
+                    ),
                   ),
                   SizedBox(height: 10),
                   Row(
@@ -286,10 +301,13 @@ class _EditProfileState extends State<EditProfile> {
                     ],
                   ),
                   SizedBox(height: 5),
-                  Container(
-                    height: 2,
-                    width: double.infinity,
-                    color: Colors.grey.shade800,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 35),
+                    child: Container(
+                      height: 2,
+                      width: double.infinity,
+                      color: Colors.grey.shade800,
+                    ),
                   ),
                   SizedBox(height: 5),
                   Row(
@@ -315,10 +333,13 @@ class _EditProfileState extends State<EditProfile> {
                     ],
                   ),
                   SizedBox(height: 5),
-                  Container(
-                    height: 2,
-                    width: double.infinity,
-                    color: Colors.grey.shade800,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 35),
+                    child: Container(
+                      height: 2,
+                      width: double.infinity,
+                      color: Colors.grey.shade800,
+                    ),
                   ),
                   SizedBox(height: 5),
                   Row(
@@ -344,10 +365,13 @@ class _EditProfileState extends State<EditProfile> {
                     ],
                   ),
                   SizedBox(height: 5),
-                  Container(
-                    height: 2,
-                    width: double.infinity,
-                    color: Colors.grey.shade800,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 35),
+                    child: Container(
+                      height: 2,
+                      width: double.infinity,
+                      color: Colors.grey.shade800,
+                    ),
                   ),
                 ],
               ),
@@ -359,6 +383,201 @@ class _EditProfileState extends State<EditProfile> {
   }
 
   Widget _buildAddressEmploymentInfo() {
-    return Column();
+    return Column(
+      children: [
+        Container(
+          height: 3,
+          width: double.infinity,
+          color: Colors.grey.shade800,
+        ),
+
+        GestureDetector(
+          onTap: () {
+            setState(() {
+              isExpanded = !isExpanded;
+            });
+          },
+          child: Container(
+            width: double.infinity,
+            height: 60,
+            color: Color(0xff101c28),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              children: [
+                Text(
+                  "ADDRESS & EMPLOYMENT INFO",
+                  style: TextStyle(color: Colors.white70),
+                ),
+                Spacer(),
+
+                Icon(
+                  isExpanded
+                      ? Icons.keyboard_arrow_up
+                      : Icons.keyboard_arrow_down,
+                  color: Colors.white,
+                ),
+              ],
+            ),
+          ),
+        ),
+
+        Container(
+          height: 3,
+          width: double.infinity,
+          color: Colors.grey.shade800,
+        ),
+
+        Padding(
+          padding: const EdgeInsets.all(20),
+          child: AnimatedSize(
+            duration: Duration(milliseconds: 300),
+            curve: Curves.easeInOut,
+            child: isExpanded
+                ? Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Color(0xff212d39),
+
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Text(
+                              "Residential Address",
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white,
+                              ),
+                            ),
+                            Spacer(),
+                            Text(
+                              "EDIT",
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.blue,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 10),
+                        _buildItem(
+                          "City/Province",
+                          "Phnom Penh",
+                          appIconsHome.districtIcon,
+                        ),
+                        SizedBox(height: 10),
+                        _buildDivider(),
+                        SizedBox(height: 10),
+                        _buildItem(
+                          "District/Khan",
+                          "Chraoy Chongvar",
+                          appIconsHome.communeIcon,
+                        ),
+                        SizedBox(height: 10),
+                        _buildDivider(),
+                        SizedBox(height: 10),
+                        _buildItem(
+                          "Commune/Sangkat",
+                          "Chraoy Chongvar",
+                          appIconsHome.communeIcon,
+                        ),
+                        SizedBox(height: 10),
+                        _buildDivider(),
+                        SizedBox(height: 10),
+                        _buildItem(
+                          "Village",
+                          "Phum1",
+                          appIconsHome.villageIcon,
+                        ),
+                        SizedBox(height: 10),
+                        _buildDivider(),
+                        SizedBox(height: 10),
+                        _buildItem("House No", "241", appIconsHome.houseIcon),
+                        SizedBox(height: 10),
+                        _buildDivider(),
+                        SizedBox(height: 10),
+                        _buildItem(
+                          "Street No",
+                          "Keo Chanda",
+                          appIconsHome.streetIcon,
+                        ),
+                        SizedBox(height: 10),
+                        _buildDivider(),
+                        SizedBox(height: 10),
+                        _buildItem(
+                          "Email",
+                          "pinsovanreach2021@gmail.com",
+                          appIconsHome.emialIcon,
+                        ),
+                        SizedBox(height: 10),
+                        _buildDivider(),
+                        SizedBox(height: 10),
+                        Text(
+                          "Employment Details",
+                          style: TextStyle(fontSize: 18, color: Colors.white),
+                        ),
+                        SizedBox(height: 10),
+                        _buildDivider(),
+                        SizedBox(height: 10),
+                        _buildItem(
+                          "Employment Type",
+                          "Student",
+                          appIconsHome.employmentTypeIcon,
+                        ),
+                        SizedBox(height: 10),
+                        _buildDivider(),
+                        SizedBox(height: 10),
+                        _buildItem(
+                          "Main Source of income",
+                          "Personal/Saving",
+                          appIconsHome.walletIcon,
+                        ),
+                        SizedBox(height: 10),
+                        _buildDivider(),
+                        SizedBox(height: 10),
+                        _buildItem(
+                          "Monthly income range",
+                          "> 100-500 dollars",
+                          appIconsHome.usdIcon,
+                        ),
+                      ],
+                    ),
+                  )
+                : SizedBox(),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildItem(String title, String value, String iconPath) {
+    return Row(
+      children: [
+        Image.asset(iconPath, fit: BoxFit.cover, scale: 4, color: Colors.white),
+        SizedBox(width: 10),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(title, style: TextStyle(fontSize: 12, color: Colors.white70)),
+            Text(value, style: TextStyle(fontSize: 16, color: Colors.white)),
+          ],
+        ),
+      ],
+    );
+  }
+
+  Widget _buildDivider() {
+    return Padding(
+      padding: const EdgeInsets.only(left: 35),
+      child: Container(
+        height: 2,
+        width: double.infinity,
+        color: Colors.grey.shade800,
+      ),
+    );
   }
 }

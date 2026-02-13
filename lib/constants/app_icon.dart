@@ -69,4 +69,19 @@ class appIconsHome {
   static String merchantModeIcon = "assets/icons/merchant_mode.png";
   static String cameraIcon = "assets/icons/cameraIcon.png";
   static String idIcon = "assets/icons/IDIcon.png";
+  static String districtIcon = "assets/icons/districIcon.png";
+  static String communeIcon = "assets/icons/communeIcon.png";
+  static String villageIcon = "assets/icons/villageIcon.png";
+  static String houseIcon = "assets/icons/house.png";
+  static String streetIcon = "assets/icons/street.png";
+  static String emialIcon = "assets/icons/emailIcon.png";
+  static String employmentTypeIcon = "assets/icons/employmentIcon.png";
+  static String walletIcon = "assets/icons/wallletIcon.png";
+  static String usdIcon = "assets/icons/usd.png";
+  static String faceIcon = "assets/icons/faceidIcon.png";
+  static String hideIcon = "assets/icons/hideIcon.png";
+  static String pinIcon = "assets/icons/PINIcon.png";
+  static String timeIcon = "assets/icons/time.png";
+  static String faceidpass = "assets/icons/faceidpass.png";
+  static String contactLogin = "assets/icons/newcellphone.png";
 }

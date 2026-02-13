@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project_nu/pages/account_number/accoutn_number.dart';
 import 'package:flutter_project_nu/pages/edit_profile/edit_profile.dart';
+import 'package:flutter_project_nu/pages/eidt_security/edit_security.dart';
 import 'package:flutter_project_nu/pages/home_screens/home_screen.dart';
 import 'package:flutter_project_nu/pages/login_screens/login_screen.dart';
 import 'package:flutter_project_nu/pages/option_login_and_register/login_or_register.dart';
@@ -123,12 +125,27 @@ class PageRoutes {
           transition: PageTransitionType.iosPush,
           duration: Duration(milliseconds: 500),
         );
+<<<<<<< HEAD
 
       case AppRoutes.savingUSDscreen:
         return PageTransition.build(
           page: SavingusdScreen(),
           settings: settings,
           transition: PageTransitionType.fadeThrough,
+=======
+      case AppRoutes.editsecurityScreen:
+        return PageTransition.build(
+          page: EditSecurity(),
+          settings: settings,
+          transition: PageTransitionType.iosPush,
+          duration: Duration(milliseconds: 500),
+        );
+      case AppRoutes.accountNumberScreen:
+        return PageTransition.build(
+          page: AccoutnNumber(),
+          settings: settings,
+          transition: PageTransitionType.iosPush,
+>>>>>>> e70ce1a0feeb3a48d5c7f710c9d637d443e354af
           duration: Duration(milliseconds: 500),
         );
       default:

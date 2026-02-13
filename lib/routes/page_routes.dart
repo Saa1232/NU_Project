@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project_nu/pages/edit_profile/edit_profile.dart';
 import 'package:flutter_project_nu/pages/home_screens/home_screen.dart';
 import 'package:flutter_project_nu/pages/login_screens/login_screen.dart';
 import 'package:flutter_project_nu/pages/option_login_and_register/login_or_register.dart';
@@ -7,7 +8,9 @@ import 'package:flutter_project_nu/pages/pin_menu_screen/account_screen.dart';
 import 'package:flutter_project_nu/pages/pin_menu_screen/card_screen.dart';
 import 'package:flutter_project_nu/pages/pin_menu_screen/favourite_screen.dart';
 import 'package:flutter_project_nu/pages/pin_menu_screen/payment_screen.dart';
+import 'package:flutter_project_nu/pages/pin_menu_screen/savingusd_screen.dart';
 import 'package:flutter_project_nu/pages/pin_menu_screen/transfer_screen.dart';
+import 'package:flutter_project_nu/pages/profile_screen/profile_screen.dart';
 import 'package:flutter_project_nu/pages/register_screen/register_screen.dart';
 import 'package:flutter_project_nu/pages/splash_screens/splash_screen.dart';
 import 'package:flutter_project_nu/routes/app_routes.dart';
@@ -106,6 +109,28 @@ class PageRoutes {
           duration: Duration(milliseconds: 500),
         );
 
+      case AppRoutes.profileScreen:
+        return PageTransition.build(
+          page: ProfileScreen(),
+          settings: settings,
+          transition: PageTransitionType.iosPushParallax,
+          duration: Duration(milliseconds: 500),
+        );
+      case AppRoutes.editProfileScreen:
+        return PageTransition.build(
+          page: EditProfile(),
+          settings: settings,
+          transition: PageTransitionType.iosPush,
+          duration: Duration(milliseconds: 500),
+        );
+
+      case AppRoutes.savingUSDscreen:
+        return PageTransition.build(
+          page: SavingusdScreen(),
+          settings: settings,
+          transition: PageTransitionType.fadeThrough,
+          duration: Duration(milliseconds: 500),
+        );
       default:
         return MaterialPageRoute(
           settings: settings,

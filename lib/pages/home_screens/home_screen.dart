@@ -29,8 +29,8 @@ var miniappitemname = [
   "Starbuck Coffee",
   "Cambolink21",
   "BookMeBus",
-  "Menulife Cambodia"
-      "See All",
+  "Menulife Cambodia",
+  "See All",
 ];
 
 var homemenuIcons = [
@@ -295,13 +295,20 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(height: 10),
               Row(
                 children: [
-                  Container(
-                    width: 55,
-                    height: 55,
-                    decoration: BoxDecoration(
-                      color: Colors.grey,
-                      shape: BoxShape.circle,
-                      border: Border.all(color: Colors.white, width: 2),
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        Navigator.pushNamed(context, AppRoutes.profileScreen);
+                      });
+                    },
+                    child: Container(
+                      width: 55,
+                      height: 55,
+                      decoration: BoxDecoration(
+                        color: Colors.grey,
+                        shape: BoxShape.circle,
+                        border: Border.all(color: Colors.white, width: 2),
+                      ),
                     ),
                   ),
                   SizedBox(width: 10),

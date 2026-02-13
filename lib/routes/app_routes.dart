@@ -11,4 +11,7 @@ abstract class AppRoutes {
   static const String cardScreen = "/cardScreen";
   static const String favoritesScreen = "/FavoriteScreen";
   static const String transferScreen = "/transferScreen";
+  static const String profileScreen = "/profileScreen";
+  static const String editProfileScreen = "/editProfileScreen";
+  static const String savingUSDscreen = "savingUSDscreen";
 }

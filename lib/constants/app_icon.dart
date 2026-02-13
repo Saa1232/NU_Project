@@ -60,4 +60,13 @@ class appIconsHome {
   static String cardScreenIcon5 = "assets/icons/card_screenicon5.jpg";
   static String favIcon = "assets/icons/fav_Icon.PNG";
   static String favScreenIcon = "assets/icons/fav_screenicon1.jpg";
+  static String profileIconsetting = "assets/icons/profileIconSettings.png";
+  static String securityIcon = "assets/icons/securityIcon (2).png";
+  static String phoneShakeIcon = "assets/icons/shake.png";
+  static String languageIcon = "assets/icons/Language (2).png";
+  static String conatactIcon = "assets/icons/contact.png";
+  static String termConditionIcon = "assets/icons/term_condition.png";
+  static String merchantModeIcon = "assets/icons/merchant_mode.png";
+  static String cameraIcon = "assets/icons/cameraIcon.png";
+  static String idIcon = "assets/icons/IDIcon.png";
 }

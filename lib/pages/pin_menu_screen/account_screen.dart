@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_project_nu/routes/app_routes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AccountScreen extends StatefulWidget {
@@ -129,7 +130,9 @@ class _AccountScreenState extends State<AccountScreen> {
         children: [
           GestureDetector(
             onTap: () {
-              setState(() {});
+              setState(() {
+                Navigator.pushNamed(context, AppRoutes.savingUSDscreen);
+              });
             },
             child: _buildsaving(
               Colors.lightBlueAccent,

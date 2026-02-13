@@ -13,10 +13,8 @@ abstract class AppRoutes {
   static const String transferScreen = "/transferScreen";
   static const String profileScreen = "/profileScreen";
   static const String editProfileScreen = "/editProfileScreen";
-<<<<<<< HEAD
   static const String savingUSDscreen = "savingUSDscreen";
-=======
   static const String editsecurityScreen = "/editSecurityScreen";
   static const String accountNumberScreen = "/accountNumberScreen";
->>>>>>> e70ce1a0feeb3a48d5c7f710c9d637d443e354af
+  static const String savingkhrScreen = "/savingkhrScreen";
 }

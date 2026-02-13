@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_nu/constants/app_icon.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SavingusdScreen extends StatefulWidget {
   const SavingusdScreen({super.key});
@@ -34,20 +35,497 @@ class _SavingusdScreenState extends State<SavingusdScreen> {
           color: Color(0xff101c28),
           borderRadius: BorderRadius.circular(20),
         ),
-        child: Padding(
-          padding: const EdgeInsets.all(20),
+        child: Column(
+          children: [
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  _buildrecipt2();
+                });
+              },
+              child: containerRec1(),
+            ),
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  _buildrecipt1();
+                });
+              },
+              child: containerRec2(),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Future<dynamic> _buildrecipt2() {
+    return showModalBottomSheet(
+      context: context,
+
+      builder: (context) {
+        return Container(
+          width: .infinity,
+          decoration: BoxDecoration(
+            color: Color(0xff212d39),
+            borderRadius: BorderRadius.circular(20),
+          ),
           child: Column(
             crossAxisAlignment: .start,
+            mainAxisSize: .min,
             children: [
-              Text(
-                "Yesterday".toUpperCase(),
-                style: TextStyle(color: Colors.white60),
+              SizedBox(height: 20),
+              Row(
+                crossAxisAlignment: .start,
+                children: [
+                  SizedBox(width: 20),
+                  Container(
+                    width: 60,
+                    height: 70,
+                    padding: EdgeInsets.all(15),
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 106, 247, 111),
+                      shape: BoxShape.circle,
+                    ),
+
+                    child: Center(
+                      child: Text(
+                        "DS",
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: .bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 20),
+                  Column(
+                    crossAxisAlignment: .start,
+                    children: [
+                      Row(
+                        crossAxisAlignment: .end,
+                        children: [
+                          Text(
+                            "50,000,000.00",
+                            style: GoogleFonts.spaceGrotesk(
+                              fontWeight: .bold,
+                              fontSize: 26,
+                              color: Colors.white,
+                            ),
+                          ),
+                          SizedBox(width: 5),
+                          Text(
+                            "USD",
+                            style: GoogleFonts.spaceGrotesk(
+                              fontWeight: .bold,
+                              fontSize: 18,
+                              color: Colors.white,
+                              height: 1.8,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Text(
+                        "Recieved from DANY SOVAN",
+                        style: GoogleFonts.spaceGrotesk(
+                          fontSize: 13,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
-              Container(width: .infinity, height: 60),
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                child: FittedBox(
+                  child: Text(
+                    "----------------------------",
+                    style: TextStyle(
+                      height: 0,
+                      color: Colors.white54,
+                      letterSpacing: 3,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10, right: 15, left: 15),
+                child: Row(
+                  children: [
+                    SizedBox(width: 15),
+                    Text("Trx. ID:", style: TextStyle(color: Colors.white54)),
+                    Spacer(),
+                    Text(
+                      "9238234243",
+                      style: TextStyle(fontWeight: .bold, color: Colors.white),
+                    ),
+                    SizedBox(width: 15),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10, right: 15, left: 15),
+                child: Row(
+                  children: [
+                    SizedBox(width: 15),
+                    Text(
+                      "Transaction date:",
+                      style: TextStyle(color: Colors.white54),
+                    ),
+                    Spacer(),
+                    Text(
+                      "Feb 12, 2026 11:21PM",
+                      style: TextStyle(fontWeight: .bold, color: Colors.white),
+                    ),
+                    SizedBox(width: 15),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10, right: 15, left: 15),
+                child: Row(
+                  children: [
+                    SizedBox(width: 15),
+                    Text(
+                      "Original amount:",
+                      style: TextStyle(color: Colors.white54),
+                    ),
+                    Spacer(),
+                    Text(
+                      "50,000,000.00 USD",
+                      style: TextStyle(fontWeight: .bold, color: Colors.white),
+                    ),
+                    SizedBox(width: 15),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10, right: 15, left: 15),
+                child: Row(
+                  children: [
+                    SizedBox(width: 15),
+                    Text(
+                      "From account:",
+                      style: TextStyle(color: Colors.white54),
+                    ),
+                    Spacer(),
+                    Text(
+                      "002 123 123",
+                      style: TextStyle(fontWeight: .bold, color: Colors.white),
+                    ),
+                    SizedBox(width: 15),
+                  ],
+                ),
+              ),
+              SizedBox(height: 20),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  Future<dynamic> _buildrecipt1() {
+    return showModalBottomSheet(
+      context: context,
+
+      builder: (context) {
+        return Container(
+          width: .infinity,
+          decoration: BoxDecoration(
+            color: Color(0xff212d39),
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Column(
+            crossAxisAlignment: .start,
+            mainAxisSize: .min,
+            children: [
+              SizedBox(height: 20),
+              Row(
+                crossAxisAlignment: .start,
+                children: [
+                  SizedBox(width: 20),
+                  Container(
+                    width: 60,
+                    height: 70,
+                    padding: EdgeInsets.all(15),
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 106, 247, 111),
+                      shape: BoxShape.circle,
+                    ),
+
+                    child: Center(
+                      child: Text(
+                        "DS",
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: .bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 20),
+                  Column(
+                    crossAxisAlignment: .start,
+                    children: [
+                      Row(
+                        crossAxisAlignment: .end,
+                        children: [
+                          Text(
+                            "50,000,000.00",
+                            style: GoogleFonts.spaceGrotesk(
+                              fontWeight: .bold,
+                              fontSize: 26,
+                              color: Colors.white,
+                            ),
+                          ),
+                          SizedBox(width: 5),
+                          Text(
+                            "USD",
+                            style: GoogleFonts.spaceGrotesk(
+                              fontWeight: .bold,
+                              fontSize: 18,
+                              color: Colors.white,
+                              height: 1.8,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Text(
+                        "Recieved from SOK SOVAN MAKARA",
+                        style: GoogleFonts.spaceGrotesk(
+                          fontSize: 13,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                child: FittedBox(
+                  child: Text(
+                    "----------------------------",
+                    style: TextStyle(
+                      height: 0,
+                      color: Colors.white54,
+                      letterSpacing: 3,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10, right: 15, left: 15),
+                child: Row(
+                  children: [
+                    SizedBox(width: 15),
+                    Text("Trx. ID:", style: TextStyle(color: Colors.white54)),
+                    Spacer(),
+                    Text(
+                      "92384892343",
+                      style: TextStyle(fontWeight: .bold, color: Colors.white),
+                    ),
+                    SizedBox(width: 15),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10, right: 15, left: 15),
+                child: Row(
+                  children: [
+                    SizedBox(width: 15),
+                    Text(
+                      "Transaction date:",
+                      style: TextStyle(color: Colors.white54),
+                    ),
+                    Spacer(),
+                    Text(
+                      "Feb 09, 2026 11:21PM",
+                      style: TextStyle(fontWeight: .bold, color: Colors.white),
+                    ),
+                    SizedBox(width: 15),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10, right: 15, left: 15),
+                child: Row(
+                  children: [
+                    SizedBox(width: 15),
+                    Text(
+                      "Original amount:",
+                      style: TextStyle(color: Colors.white54),
+                    ),
+                    Spacer(),
+                    Text(
+                      "50,000,000.00 USD",
+                      style: TextStyle(fontWeight: .bold, color: Colors.white),
+                    ),
+                    SizedBox(width: 15),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10, right: 15, left: 15),
+                child: Row(
+                  children: [
+                    SizedBox(width: 15),
+                    Text(
+                      "From account:",
+                      style: TextStyle(color: Colors.white54),
+                    ),
+                    Spacer(),
+                    Text(
+                      "002 232 123",
+                      style: TextStyle(fontWeight: .bold, color: Colors.white),
+                    ),
+                    SizedBox(width: 15),
+                  ],
+                ),
+              ),
+              SizedBox(height: 20),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  Column containerRec1() {
+    return Column(
+      crossAxisAlignment: .start,
+      children: [
+        SizedBox(height: 20),
+        Padding(
+          padding: const EdgeInsets.only(left: 10),
+          child: Text(
+            "Yesterday".toUpperCase(),
+            style: TextStyle(color: Colors.white60),
+          ),
+        ),
+        SizedBox(height: 10),
+        Container(
+          width: .infinity,
+          height: 70,
+          padding: EdgeInsets.all(15),
+          decoration: BoxDecoration(color: Colors.white12),
+          child: Row(
+            children: [
+              Container(
+                width: 60,
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 36, 250, 107),
+                  shape: BoxShape.circle,
+                ),
+                child: Center(
+                  child: Text(
+                    "DS",
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: .bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(width: 10),
+              Text(
+                "Dany Sovan".toUpperCase(),
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                  fontWeight: .w400,
+                ),
+              ),
+              Spacer(),
+              Text(
+                "50,000,000.00",
+                style: TextStyle(
+                  fontWeight: .bold,
+                  color: Colors.green,
+                  fontSize: 16,
+                ),
+              ),
+              SizedBox(width: 5),
+              Text(
+                "usd".toUpperCase(),
+                style: TextStyle(color: Colors.green, fontSize: 12),
+              ),
             ],
           ),
         ),
-      ),
+      ],
+    );
+  }
+
+  Column containerRec2() {
+    return Column(
+      crossAxisAlignment: .start,
+      children: [
+        SizedBox(height: 20),
+        Padding(
+          padding: const EdgeInsets.only(left: 10),
+          child: Text(
+            "09 feb 2026".toUpperCase(),
+            style: TextStyle(color: Colors.white60),
+          ),
+        ),
+        SizedBox(height: 10),
+        Container(
+          width: .infinity,
+          height: 70,
+          padding: EdgeInsets.all(15),
+          decoration: BoxDecoration(color: Colors.white12),
+          child: Row(
+            children: [
+              Container(
+                width: 60,
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 36, 250, 107),
+                  shape: BoxShape.circle,
+                ),
+                child: Center(
+                  child: Text(
+                    "DS",
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: .bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(width: 10),
+              Text(
+                "sok sovanmakara".toUpperCase(),
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                  fontWeight: .w400,
+                ),
+              ),
+              Spacer(),
+              Text(
+                "50,000,000.00",
+                style: TextStyle(
+                  fontWeight: .bold,
+                  color: Colors.green,
+                  fontSize: 16,
+                ),
+              ),
+              SizedBox(width: 5),
+              Text(
+                "usd".toUpperCase(),
+                style: TextStyle(color: Colors.green, fontSize: 12),
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 
@@ -91,7 +569,7 @@ class _SavingusdScreenState extends State<SavingusdScreen> {
             ),
           ),
           Text(
-            "Total Balance: 18.23 USD",
+            "Total Balance: 100,000,000.00 USD",
             style: TextStyle(
               color: Colors.white54,
               fontWeight: .w400,

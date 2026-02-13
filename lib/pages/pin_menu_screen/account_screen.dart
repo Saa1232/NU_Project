@@ -142,7 +142,11 @@ class _AccountScreenState extends State<AccountScreen> {
             ),
           ),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              setState(() {
+                Navigator.pushNamed(context, AppRoutes.savingkhrScreen);
+              });
+            },
             child: _buildsaving(
               Colors.deepPurple,
               "0.00",

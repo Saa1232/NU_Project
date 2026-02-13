@@ -10,6 +10,7 @@ import 'package:flutter_project_nu/pages/pin_menu_screen/account_screen.dart';
 import 'package:flutter_project_nu/pages/pin_menu_screen/card_screen.dart';
 import 'package:flutter_project_nu/pages/pin_menu_screen/favourite_screen.dart';
 import 'package:flutter_project_nu/pages/pin_menu_screen/payment_screen.dart';
+import 'package:flutter_project_nu/pages/pin_menu_screen/savingkhr_screen.dart';
 import 'package:flutter_project_nu/pages/pin_menu_screen/savingusd_screen.dart';
 import 'package:flutter_project_nu/pages/pin_menu_screen/transfer_screen.dart';
 import 'package:flutter_project_nu/pages/profile_screen/profile_screen.dart';
@@ -125,14 +126,6 @@ class PageRoutes {
           transition: PageTransitionType.iosPush,
           duration: Duration(milliseconds: 500),
         );
-<<<<<<< HEAD
-
-      case AppRoutes.savingUSDscreen:
-        return PageTransition.build(
-          page: SavingusdScreen(),
-          settings: settings,
-          transition: PageTransitionType.fadeThrough,
-=======
       case AppRoutes.editsecurityScreen:
         return PageTransition.build(
           page: EditSecurity(),
@@ -145,7 +138,22 @@ class PageRoutes {
           page: AccoutnNumber(),
           settings: settings,
           transition: PageTransitionType.iosPush,
->>>>>>> e70ce1a0feeb3a48d5c7f710c9d637d443e354af
+          duration: Duration(milliseconds: 500),
+        );
+
+      case AppRoutes.savingUSDscreen:
+        return PageTransition.build(
+          page: SavingusdScreen(),
+          settings: settings,
+          transition: PageTransitionType.fadeThrough,
+          duration: Duration(milliseconds: 500),
+        );
+
+      case AppRoutes.savingkhrScreen:
+        return PageTransition.build(
+          page: SavingkhrScreen(),
+          settings: settings,
+          transition: PageTransitionType.fadeThrough,
           duration: Duration(milliseconds: 500),
         );
       default:

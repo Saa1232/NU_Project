@@ -10,6 +10,7 @@ import 'package:flutter_project_nu/pages/pin_menu_screen/account_screen.dart';
 import 'package:flutter_project_nu/pages/pin_menu_screen/card_screen.dart';
 import 'package:flutter_project_nu/pages/pin_menu_screen/favourite_screen.dart';
 import 'package:flutter_project_nu/pages/pin_menu_screen/payment_screen.dart';
+import 'package:flutter_project_nu/pages/pin_menu_screen/savingusd_screen.dart';
 import 'package:flutter_project_nu/pages/pin_menu_screen/transfer_screen.dart';
 import 'package:flutter_project_nu/pages/profile_screen/profile_screen.dart';
 import 'package:flutter_project_nu/pages/register_screen/register_screen.dart';
@@ -134,6 +135,13 @@ class PageRoutes {
       case AppRoutes.accountNumberScreen:
         return PageTransition.build(
           page: AccoutnNumber(),
+          settings: settings,
+          transition: PageTransitionType.iosPush,
+          duration: Duration(milliseconds: 500),
+        );
+        case AppRoutes.savingUSDscreen:
+        return PageTransition.build(
+          page: SavingusdScreen(),
           settings: settings,
           transition: PageTransitionType.iosPush,
           duration: Duration(milliseconds: 500),

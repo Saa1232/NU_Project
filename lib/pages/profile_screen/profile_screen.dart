@@ -96,7 +96,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ),
           SizedBox(height: 5),
           Text(
-            "Name",
+            "Pin Sovanreach",
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,

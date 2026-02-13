@@ -328,7 +328,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         style: TextStyle(color: Colors.grey),
                       ),
                       Text(
-                        "Name",
+                        "Pin Sovanreach",
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: .bold,

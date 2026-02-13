@@ -276,7 +276,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamed(context, AppRoutes.qrScreen);
+                    },
                     child: Container(
                       padding: EdgeInsets.all(2),
 

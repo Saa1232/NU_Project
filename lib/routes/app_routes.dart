@@ -16,4 +16,6 @@ abstract class AppRoutes {
   static const String savingUSDscreen = "savingUSDscreen";
   static const String editsecurityScreen = "/editSecurityScreen";
   static const String accountNumberScreen = "/accountNumberScreen";
+    static const String qrScreen = "/qrScreen";
+
 }

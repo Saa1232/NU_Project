@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_nu/constants/app_icon.dart';
+import 'package:flutter_project_nu/constants/app_image.dart';
 import 'package:flutter_project_nu/routes/app_routes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -275,7 +276,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamed(context, AppRoutes.qrScreen);
+                    },
                     child: Container(
                       padding: EdgeInsets.all(2),
 
@@ -309,6 +312,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         shape: BoxShape.circle,
                         border: Border.all(color: Colors.white, width: 2),
                       ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadiusGeometry.circular(30),
+                        child: Image.asset(
+                          AppImage.profileImage,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     ),
                   ),
                   SizedBox(width: 10),
@@ -320,7 +330,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         style: TextStyle(color: Colors.grey),
                       ),
                       Text(
-                        "Name",
+                        "Pin Sovanreach",
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: .bold,

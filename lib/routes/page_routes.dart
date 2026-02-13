@@ -3,6 +3,7 @@ import 'package:flutter_project_nu/pages/account_number/accoutn_number.dart';
 import 'package:flutter_project_nu/pages/edit_profile/edit_profile.dart';
 import 'package:flutter_project_nu/pages/eidt_security/edit_security.dart';
 import 'package:flutter_project_nu/pages/home_screens/home_screen.dart';
+import 'package:flutter_project_nu/pages/home_screens/qr_screen.dart';
 import 'package:flutter_project_nu/pages/login_screens/login_screen.dart';
 import 'package:flutter_project_nu/pages/option_login_and_register/login_or_register.dart';
 import 'package:flutter_project_nu/pages/pin_menu_screen/aba_scan__screen.dart';
@@ -140,11 +141,15 @@ class PageRoutes {
           transition: PageTransitionType.iosPush,
           duration: Duration(milliseconds: 500),
         );
+<<<<<<< HEAD
 
+=======
+>>>>>>> 53a7999ba4c8a389b04ae6aec79d87ea5a96ea8e
       case AppRoutes.savingUSDscreen:
         return PageTransition.build(
           page: SavingusdScreen(),
           settings: settings,
+<<<<<<< HEAD
           transition: PageTransitionType.fadeThrough,
           duration: Duration(milliseconds: 500),
         );
@@ -154,6 +159,16 @@ class PageRoutes {
           page: SavingkhrScreen(),
           settings: settings,
           transition: PageTransitionType.fadeThrough,
+=======
+          transition: PageTransitionType.iosPush,
+          duration: Duration(milliseconds: 500),
+        );
+      case AppRoutes.qrScreen:
+        return PageTransition.build(
+          page: QrScreen(),
+          settings: settings,
+          transition: PageTransitionType.iosPush,
+>>>>>>> 53a7999ba4c8a389b04ae6aec79d87ea5a96ea8e
           duration: Duration(milliseconds: 500),
         );
       default:

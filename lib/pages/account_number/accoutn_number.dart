@@ -45,7 +45,7 @@ class _AccoutnNumberState extends State<AccoutnNumber> {
           children: [
             GestureDetector(
               onTap: () {
-                Navigator.pop(context);
+                Navigator.popAndPushNamed(context, "/loginScreen");
               },
               child: Icon(Icons.arrow_back_ios, color: Colors.white),
             ),

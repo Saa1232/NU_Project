@@ -455,6 +455,7 @@ class _SavingusdScreenState extends State<SavingusdScreen> {
                 "usd".toUpperCase(),
                 style: TextStyle(color: Colors.green, fontSize: 12),
               ),
+              SizedBox(width: .infinity, height: 60),
             ],
           ),
         ),

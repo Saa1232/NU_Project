@@ -343,7 +343,7 @@ class _EditSecurityState extends State<EditSecurity> {
             style: TextStyle(fontSize: 18, color: Colors.white),
           ),
           Container(
-            height: 200,
+            height: 150,
             width: double.infinity,
             decoration: BoxDecoration(
               color: const Color(0xff212d39),

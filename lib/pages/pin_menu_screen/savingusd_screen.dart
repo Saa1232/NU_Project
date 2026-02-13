@@ -90,7 +90,7 @@ class _SavingusdScreenState extends State<SavingusdScreen> {
 
                     child: Center(
                       child: Text(
-                        "DS",
+                        "DV",
                         style: TextStyle(
                           fontSize: 17,
                           fontWeight: .bold,
@@ -127,7 +127,7 @@ class _SavingusdScreenState extends State<SavingusdScreen> {
                         ],
                       ),
                       Text(
-                        "Recieved from DANY SOVAN",
+                        "Recieved from DOEUN VANDA",
                         style: GoogleFonts.spaceGrotesk(
                           fontSize: 13,
                           color: Colors.white,
@@ -258,7 +258,7 @@ class _SavingusdScreenState extends State<SavingusdScreen> {
 
                     child: Center(
                       child: Text(
-                        "DS",
+                        "CH",
                         style: TextStyle(
                           fontSize: 17,
                           fontWeight: .bold,
@@ -295,7 +295,7 @@ class _SavingusdScreenState extends State<SavingusdScreen> {
                         ],
                       ),
                       Text(
-                        "Recieved from SOK SOVAN MAKARA",
+                        "Recieved from CHHEA TONGHENG",
                         style: GoogleFonts.spaceGrotesk(
                           fontSize: 13,
                           color: Colors.white,
@@ -403,7 +403,7 @@ class _SavingusdScreenState extends State<SavingusdScreen> {
         Padding(
           padding: const EdgeInsets.only(left: 10),
           child: Text(
-            "Yesterday".toUpperCase(),
+            "yesterday".toUpperCase(),
             style: TextStyle(color: Colors.white60),
           ),
         ),
@@ -423,7 +423,7 @@ class _SavingusdScreenState extends State<SavingusdScreen> {
                 ),
                 child: Center(
                   child: Text(
-                    "DS",
+                    "DV",
                     style: TextStyle(
                       fontSize: 17,
                       fontWeight: .bold,
@@ -434,7 +434,7 @@ class _SavingusdScreenState extends State<SavingusdScreen> {
               ),
               SizedBox(width: 10),
               Text(
-                "Dany Sovan".toUpperCase(),
+                "Deoun Vanda".toUpperCase(),
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 15,
@@ -455,7 +455,6 @@ class _SavingusdScreenState extends State<SavingusdScreen> {
                 "usd".toUpperCase(),
                 style: TextStyle(color: Colors.green, fontSize: 12),
               ),
-              SizedBox(width: .infinity, height: 60),
             ],
           ),
         ),
@@ -491,7 +490,7 @@ class _SavingusdScreenState extends State<SavingusdScreen> {
                 ),
                 child: Center(
                   child: Text(
-                    "DS",
+                    "CH",
                     style: TextStyle(
                       fontSize: 17,
                       fontWeight: .bold,
@@ -502,7 +501,7 @@ class _SavingusdScreenState extends State<SavingusdScreen> {
               ),
               SizedBox(width: 10),
               Text(
-                "sok sovanmakara".toUpperCase(),
+                "Chhea tongheng".toUpperCase(),
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 15,

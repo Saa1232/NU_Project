@@ -141,25 +141,11 @@ class PageRoutes {
           transition: PageTransitionType.iosPush,
           duration: Duration(milliseconds: 500),
         );
-<<<<<<< HEAD
 
-=======
->>>>>>> 53a7999ba4c8a389b04ae6aec79d87ea5a96ea8e
       case AppRoutes.savingUSDscreen:
         return PageTransition.build(
           page: SavingusdScreen(),
           settings: settings,
-<<<<<<< HEAD
-          transition: PageTransitionType.fadeThrough,
-          duration: Duration(milliseconds: 500),
-        );
-
-      case AppRoutes.savingkhrScreen:
-        return PageTransition.build(
-          page: SavingkhrScreen(),
-          settings: settings,
-          transition: PageTransitionType.fadeThrough,
-=======
           transition: PageTransitionType.iosPush,
           duration: Duration(milliseconds: 500),
         );
@@ -168,7 +154,15 @@ class PageRoutes {
           page: QrScreen(),
           settings: settings,
           transition: PageTransitionType.iosPush,
->>>>>>> 53a7999ba4c8a389b04ae6aec79d87ea5a96ea8e
+
+          duration: Duration(milliseconds: 500),
+        );
+
+      case AppRoutes.savingkhrScreen:
+        return PageTransition.build(
+          page: SavingkhrScreen(),
+          settings: settings,
+          transition: PageTransitionType.fadeThrough,
           duration: Duration(milliseconds: 500),
         );
       default:
